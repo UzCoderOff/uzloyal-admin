@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
-import DashBoard from "./components/DashBoard";
+import MainPanel from "./components/MainPanel";
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -40,8 +40,8 @@ const App = () => {
           element={!isAuth ? <Login /> : <Navigate to={"/"} />}
         />
         <Route
-          path="/"
-          element={isAuth ? <DashBoard /> : <Navigate to={"/login"} />}
+          path="*"
+          element={isAuth ? <MainPanel/>  : <Navigate to={"/login"} />}
         />
       </Routes>
     </BrowserRouter>

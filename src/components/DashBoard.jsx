@@ -153,16 +153,10 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-6 min-h-screen bg-gray-100">
+    <div className="p-6 min-h-screen bg-gray-100 w-full">
       <ToastContainer position="top-right" />
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
-        <button
-          onClick={deleteToken}
-          className="bg-yellow-400 text-gray-900 font-semibold py-2 px-4 rounded-md hover:bg-yellow-500 transition-all shadow-md"
-        >
-          Logout
-        </button>
       </div>
 
       <div className="bg-white p-6 rounded-lg shadow-lg">
